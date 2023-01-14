@@ -1,38 +1,209 @@
-.App {
-  text-align: center;
+/* NavBar */
+nav {
+  display: flex;
+  align-items: center;
+  background-color: #21222a;
+  height: 90px;
+  padding: 30px 25px;
+}
+a {
+  text-decoration: none;
+  background-color: transparent;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav--icon {
+  height: 55px;
+  margin-right: 7px;
+}
+.nav--logo_text {
+  margin-right: auto;
+  color: #ff1c31;
+  font-weight: 700;
+  font-size: 18px;
+}
+.nav--title {
+  color: #deebf8;
+  font-weight: 600;
+  margin-right: auto;
+}
+.nav--list {
+  display: flex;
+}
+.nav--list > li {
+  list-style: none;
+  color: white;
+  padding: 7px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.nav--list a:link {
+  color: white;
+  font-weight: 700;
+}
+.nav--list a:visited {
+  color: yellow;
+}
+.nav--list a:hover {
+  color: red;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 375px) {
+  .nav--list {
+    display: block;
+    padding: 2px;
+    margin: 0;
+  }
+  .nav--title {
+    margin-left: 10px;
+    font-size: 10px;
+    letter-spacing: 0.05rem;
+    padding: 10px;
+  }
+  .nav--logo_text {
+    font-size: 9px;
+  }
+  .nav--icon {
+    height: 25px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Navbar Toggle button */
+.navbar--toggle-container {
+  width: 70px;
+  background-color: #c4c4c4;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 3px;
+  padding: 2px;
+  height: 32px;
+  position: relative;
+}
+
+.dialog-button {
+  font-size: 10px;
+  line-height: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: #002b49;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 18px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  min-width: 46px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  width: 38px;
+  min-width: unset;
+  border-radius: 3px;
+  box-sizing: border-box;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  position: absolute;
+  left: 34px;
+  transition: all 0.3s ease;
+}
+
+.disabled {
+  background-color: #707070;
+  left: 2px;
+}
+/* main */
+main {
+  padding: 57px 27px;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.main--title {
+  margin: 0;
+  font-size: 39px;
+  letter-spacing: -0.05rem;
+}
+.main--content {
+  margin-top: 46px;
+  letter-spacing: 0.05rem;
+  padding-block: 10px;
+  min-height: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 375px) {
+  .main--content {
+    margin: 26px;
+    letter-spacing: 0.09rem;
+    padding-block: 5px;
+    font-size: larger;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+/* Project List */
+.projects--list > li {
+  list-style: none;
+}
+.projects--list h3 {
+  text-align: center;
+  color: white;
+  font-weight: 700;
+}
+/* Project Display */
+.projects--display {
+  text-align: center;
+  margin: auto;
+  padding-block: 32px;
+  color: white;
+}
+.projects-display--url {
+  text-decoration: none;
+  color: lightblue;
+}
+.projects-display--image {
+  height: 155px;
+}
+.projects-display--title {
+  margin: 0;
+  color: white;
+}
+.projects-display--description {
+  margin-top: 6px;
+  letter-spacing: 0.05rem;
+  padding-block: 10px;
+}
+
+/* Footer */
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+
+  height: 50px;
+  margin-top: -50px;
+  padding: 10px;
+}
+
+.footer--links {
+  display: flex;
+  list-style: none;
+  color: white;
+  padding: 4px;
+  margin-top: auto;
+}
+.footer--links a:link {
+  color: white;
+  font-size: 35px;
+}
+.footer--links a:visited {
+  color: white;
+}
+.footer--links a:hover {
+  color: yellow;
+}
+.footer--links li {
+  padding: 2px;
+  margin-right: 25px;
+}
+.footer--content {
+  color: yellow;
+  margin-top: auto;
+}
+.footer--content small {
+  padding: 4px;
+  color: white;
+  margin-left: 2px;
+  margin-right: 0;
 }
