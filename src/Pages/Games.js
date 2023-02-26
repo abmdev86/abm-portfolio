@@ -10,7 +10,7 @@ export default function Games() {
         <Grid
           key={index}
           xs={6}
-          sx={{ width: { xs: '100%', md: '50%' }, m: 'auto' }}
+          sx={{ width: { xs: '100%', md: '50%' }, m: 'auto', p: 4 }}
         >
           <Paper
             elevation={24}

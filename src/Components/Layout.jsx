@@ -12,7 +12,7 @@ export default function Layout({ children }) {
             <CssBaseline enableColorScheme />
             <NavBar logoName="Auroiah" />
 
-            <Container maxWidth='md' sx={{ height: '100vh', m: 'auto' }}>
+            <Container maxWidth='md' sx={{ height: '100%', m: 'auto' }}>
 
                 {children}
                 <AppFooter />

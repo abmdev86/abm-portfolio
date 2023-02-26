@@ -1,6 +1,6 @@
-import "../App.css";
+import '../App.css';
 
-import AboutMeCard from "../Components/AboutMeCard";
+import AboutMeCard from '../Components/AboutMeCard';
 
 function Home() {
   return <AboutMeCard />;

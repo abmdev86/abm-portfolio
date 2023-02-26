@@ -122,8 +122,11 @@ export default function NavBar({ logoName }) {
                 </Typography>
               </Button>
             ))}
+          </Box >
+          <Box sx={{ flexGrow: 0 }}>
+            <SocialMediaLinks />
+
           </Box>
-          <SocialMediaLinks />
         </Toolbar>
       </Container>
     </AppBar>
