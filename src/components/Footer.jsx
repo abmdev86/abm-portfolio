@@ -1,30 +1,36 @@
+import { Typography } from "@mui/material";
+import Grid from "@mui/material/Unstable_Grid2";
+import CopyrightIcon from '@mui/icons-material/Copyright';
+
 export default function Footer() {
   return (
-    <footer className="footer">
-      <p className="footer--content">
-        Auroiah Morgan Development
-        <small>
-          <i class="fa-solid fa-copyright"></i>
-        </small>
-        2023
-      </p>
-      <ul className="footer--links">
-        <li>
-          <a href="https://github.com/abmdev86">
-            <i class="fa-brands fa-github"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://twitter.com/abm_dev">
-            <i class="fa-brands fa-twitter"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.buymeacoffee.com/auroiahmorw">
-            <i class="fa-solid fa-mug-hot"></i>
-          </a>
-        </li>
-      </ul>
+    <footer>
+      <Grid
+        container
+        spacing={2}
+        rowSpacing={1}
+        columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+        color="primary"
+        sx={{ flexShrink: 0, position: 'fixed', bottom: 0, width: '100%' }}
+      >
+        <Grid xs={12}>
+
+
+          <Typography variant="subtitle1" sx={{ color: 'inherit', letterSpacing: 2, fontWeight: 600, textAlign: 'center', }} >
+
+            <small>
+              Aurmor Designs
+              <CopyrightIcon />
+              2023
+
+            </small>
+          </Typography>
+
+
+        </Grid>
+
+      </Grid>
     </footer>
+
   );
 }
