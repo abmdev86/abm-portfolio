@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/abm-portfolio/static/css/main.e69bdcda.css",
-    "main.js": "/abm-portfolio/static/js/main.56fc4bdb.js",
+    "main.js": "/abm-portfolio/static/js/main.8715f1ed.js",
     "static/js/787.39bd4e55.chunk.js": "/abm-portfolio/static/js/787.39bd4e55.chunk.js",
-    "static/media/abm_logo.png": "/abm-portfolio/static/media/abm_logo.1a0b4863f2b0d8095d49.png",
+    "static/media/abm-logo.svg": "/abm-portfolio/static/media/abm-logo.2b02cbea2306a81aea6cd1c7af93bae4.svg",
     "index.html": "/abm-portfolio/index.html",
     "main.e69bdcda.css.map": "/abm-portfolio/static/css/main.e69bdcda.css.map",
-    "main.56fc4bdb.js.map": "/abm-portfolio/static/js/main.56fc4bdb.js.map",
+    "main.8715f1ed.js.map": "/abm-portfolio/static/js/main.8715f1ed.js.map",
     "787.39bd4e55.chunk.js.map": "/abm-portfolio/static/js/787.39bd4e55.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e69bdcda.css",
-    "static/js/main.56fc4bdb.js"
+    "static/js/main.8715f1ed.js"
   ]
 }
