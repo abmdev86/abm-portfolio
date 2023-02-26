@@ -15,8 +15,9 @@ export default function Layout({ children }) {
             <Container maxWidth='md' sx={{ height: '100vh', m: 'auto' }}>
 
                 {children}
+                <AppFooter />
+
             </Container>
-            <AppFooter />
 
         </ThemeProvider>
     );
