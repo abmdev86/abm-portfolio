@@ -11,7 +11,7 @@ export default function AppFooter() {
         rowSpacing={1}
         columnSpacing={{ xs: 1, sm: 2, md: 3 }}
         color="primary"
-        sx={{ flexShrink: 0, position: 'relative', width: '100%', clear: 'both', mt: 4 }}
+        sx={{ flexShrink: 0, position: 'relative', width: '100%', clear: 'both', mt: 4, bottom: 0 }}
       >
         <Grid xs={12}>
 
