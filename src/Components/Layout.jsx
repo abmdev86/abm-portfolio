@@ -1,9 +1,9 @@
-import Grid from "@mui/material/Unstable_Grid2";
+
 
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { mainTheme } from "../Themes";
 import NavBar from "./NavBar";
-import Footer from "./Footer";
+import AppFooter from "./AppFooter";
 import { Container } from "@mui/system";
 
 export default function Layout({ children }) {
@@ -16,7 +16,7 @@ export default function Layout({ children }) {
 
                 {children}
             </Container>
-            <Footer />
+            <AppFooter />
 
         </ThemeProvider>
     );

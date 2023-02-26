@@ -2,7 +2,7 @@ import { Typography } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import CopyrightIcon from '@mui/icons-material/Copyright';
 
-export default function Footer() {
+export default function AppFooter() {
   return (
     <footer>
       <Grid

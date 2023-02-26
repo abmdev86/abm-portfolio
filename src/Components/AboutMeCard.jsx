@@ -1,6 +1,6 @@
 import { Paper, Typography } from "@mui/material";
 
-export default function AboutMe() {
+export default function AboutMeCard() {
   return (
     <Paper elevation={3} sx={{ m: { xs: 2, md: 5 }, p: 4 }}>
       <Typography variant="h4" align="center">About Me:</Typography>
