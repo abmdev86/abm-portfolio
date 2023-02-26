@@ -1,7 +1,7 @@
 {
   "name": "abm-portfolio",
   "version": "1.0.0",
-  "homepage": "https://abmdev86.github.io/abm-portfolio",
+  
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.6",
