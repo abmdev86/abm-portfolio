@@ -11,7 +11,7 @@ export default function Footer() {
         rowSpacing={1}
         columnSpacing={{ xs: 1, sm: 2, md: 3 }}
         color="primary"
-        sx={{ flexShrink: 0, position: 'fixed', bottom: 0, width: '100%' }}
+        sx={{ flexShrink: 0, position: 'relative', width: '100%', height: '2.5rem', clear: 'both' }}
       >
         <Grid xs={12}>
 
