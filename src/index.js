@@ -1,29 +1,31 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import "./index.css";
-import Home from "./Pages/Home";
-import reportWebVitals from "./reportWebVitals";
-import Layout from "./Components/Layout";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Games from "./Pages/Games";
-import Projects from "./Pages/Projects";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import reportWebVitals from './reportWebVitals';
+import './index.css';
+import { Home, Games, Projects } from './pages';
+// import Home from "./pages/home";
+// import Games from "./pages/games";
+// import Projects from "./pages/projects";
+
+import Layout from './components/Layout';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <Home />,
   },
   {
-    path: "/games",
+    path: '/games',
     element: <Games />,
   },
   {
-    path: "/projects",
+    path: '/projects',
     element: <Projects />,
   },
 ]);
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Layout>

@@ -1,9 +1,9 @@
-import { Box, Paper, Typography } from "@mui/material";
-
+import { Box, Paper, Typography, Grid } from "@mui/material";
+import { SHOPIFY_LOGO_BLACK } from '../images';
 export default function AboutMeCard() {
   return (
     <Box sx={{ height: '100vh', }}>
-      <Typography variant="h1" align="start" sx={{ fontWeight: 700, wordSpacing: 25 }}>{`\u{1F44B}`}AUROIAH MORGAN</Typography>
+      <Typography variant="h1" sx={{ fontWeight: 700, wordSpacing: 25 }}>{`\u{1F44B}`}AUROIAH MORGAN</Typography>
       <Typography variant="h3" align="center">Fullstack Dev</Typography>
 
       <Paper elevation={24} sx={{ m: { xs: 2, md: 5 }, p: 4 }}>
@@ -13,6 +13,26 @@ export default function AboutMeCard() {
           crafting creative, solid and scalable projects with great user experience, accessibility, optimized performance, and maintainability
         </Typography>
       </Paper>
+      <Box sx={{
+        display: 'flex',
+        width: '100%',
+        alignItems: 'center',
+        justifyContent: 'center',
+        bgcolor: 'background.default',
+        color: 'text.primary',
+        borderRadius: 1,
+        p: 3,
+      }} >
+        <Grid container spacing={2}>
+          <Grid item xs={3}>
+            <Paper elevation={24} sx={{ m: { xs: 2, md: 5 }, p: 4, width: 'min-content' }}>
+              <img src={SHOPIFY_LOGO_BLACK} alt="shopify-partner-logo" />
+
+            </Paper>
+          </Grid>
+
+        </Grid>
+      </Box>
     </Box>
 
   );
