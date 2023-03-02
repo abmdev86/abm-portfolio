@@ -1,1 +1,0 @@
-export { ColorModeContext } from './ColorModeContext';

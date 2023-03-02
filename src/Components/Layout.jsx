@@ -1,6 +1,6 @@
 
 
-import { ColorModeContext, } from "../Themes";
+import { ColorModeContext } from "../Themes";
 import { useContext } from "react";
 import NavBar from "./NavBar";
 import AppFooter from "./AppFooter";

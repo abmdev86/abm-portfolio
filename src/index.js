@@ -3,10 +3,6 @@ import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
 import { Home, Games, Projects } from './pages';
-// import Home from "./pages/home";
-// import Games from "./pages/games";
-// import Projects from "./pages/projects";
-
 import Layout from './components/Layout';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
