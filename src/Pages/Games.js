@@ -18,7 +18,7 @@ export default function Games() {
           >
             <Box
               sx={{
-                p: 2,
+                p: 1.5,
                 bgcolor: 'background.secondary',
                 display: 'flex',
               }}
