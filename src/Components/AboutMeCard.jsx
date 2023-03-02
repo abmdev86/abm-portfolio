@@ -1,5 +1,4 @@
-import { Box, Paper, Typography, Grid } from "@mui/material";
-import { SHOPIFY_LOGO_BLACK } from '../images';
+import { Box, Paper, Typography } from "@mui/material";
 export default function AboutMeCard() {
   return (
     <Box sx={{ height: '100vh', }}>
@@ -23,15 +22,7 @@ export default function AboutMeCard() {
         borderRadius: 1,
         p: 3,
       }} >
-        <Grid container spacing={2}>
-          <Grid item xs={3}>
-            <Paper elevation={24} sx={{ m: { xs: 2, md: 5 }, p: 4, width: 'min-content' }}>
-              <img src={SHOPIFY_LOGO_BLACK} alt="shopify-partner-logo" />
 
-            </Paper>
-          </Grid>
-
-        </Grid>
       </Box>
     </Box>
 

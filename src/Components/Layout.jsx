@@ -1,17 +1,14 @@
 
 
-import { CssBaseline, ThemeProvider } from "@mui/material";
-import { basicTheme, ColorModeContext, darkTheme, getDesignTokens } from "../Themes";
-import { useState, useMemo, useEffect, useContext } from "react";
+import { ColorModeContext, } from "../Themes";
+import { useContext } from "react";
 import NavBar from "./NavBar";
 import AppFooter from "./AppFooter";
 import { Container } from "@mui/system";
-import { useTheme } from '@mui/material/styles';
 import ToggleColorMode from "./ToggleColorMode";
 
 
 export default function Layout({ children }) {
-    const theme = useTheme();
     const colorMode = useContext(ColorModeContext);
 
 
@@ -23,14 +20,26 @@ export default function Layout({ children }) {
 
         <ToggleColorMode>
 
+            <ColorModeContext.Consumer>
+                {
 
-            <NavBar logoName="Auroiah" handleChangeColorMode={colorMode.toggleColorMode} mode={theme.palette.mode} />
-            <Container maxWidth='md' sx={{ height: '100%', m: 'auto' }}>
+                    (({ currentTheme }) => (
+                        <>
+                            <NavBar logoName="Auroiah" handleChangeColorMode={colorMode.toggleColorMode} mode={currentTheme === 'light' ? 'Dark' : 'Light'} />
+                            <Container maxWidth='md' sx={{ height: '100%', m: 'auto' }}>
+                                {children}
+                                <AppFooter />
+                                {colorMode.currentTheme}
+                            </Container>
+                        </>
 
-                {children}
-                <AppFooter />
+                    ))
+                }
 
-            </Container>
+
+
+            </ColorModeContext.Consumer>
+
         </ToggleColorMode>
 
 

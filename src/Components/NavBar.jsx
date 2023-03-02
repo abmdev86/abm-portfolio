@@ -24,7 +24,7 @@ export default function NavBar({ logoName, handleChangeColorMode, mode }) {
   };
 
   return (
-    <AppBar position="sticky">
+    <AppBar position="sticky" sx={{ bgcolor: 'background.default', color: 'inherit' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <LogoIcon height="50px" width="50px" xs="none" md="flex" />
@@ -108,7 +108,7 @@ export default function NavBar({ logoName, handleChangeColorMode, mode }) {
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page, index) => (
               <Button key={index} onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'inherit', display: 'block' }}>
+                sx={{ my: 2, color: 'inherit', display: 'block', }}>
                 <Typography noWrap
                   component="a"
                   href={`/${page.toLocaleLowerCase()}`}
@@ -131,7 +131,7 @@ export default function NavBar({ logoName, handleChangeColorMode, mode }) {
           <Box sx={{ flexGrow: 0 }}>
             <ColorModeContext.Consumer>
               {({ toggleColorMode }) => (
-                <Button variant="contained" sx={{ color: 'inherit' }} onClick={toggleColorMode}>Toggle {mode}</Button>
+                <Button variant="contained" sx={{ color: 'inherit' }} onClick={toggleColorMode}>Use {mode} Mode</Button>
               )}
 
 

@@ -6,3 +6,4 @@ export { NavBar } from './NavBar';
 export { ProjectList } from './ProjectList';
 export { ProjectDisplay } from './ProjectDisplay';
 export { SocialMediaLinks } from './SocialMediaLinks';
+export { ToggleColorMode } from './ToggleColorMode';

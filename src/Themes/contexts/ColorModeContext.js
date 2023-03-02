@@ -1,7 +1,6 @@
+import { palette } from '@mui/system';
 import { createContext } from 'react';
 
-const COLOR_MODE = {
+export const ColorModeContext = createContext({
   toggleColorMode: () => {},
-};
-
-export const ColorModeContext = createContext({ toggleColorMode: () => {} });
+});
