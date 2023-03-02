@@ -1,7 +1,6 @@
 import { Container, Typography, Box } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import CopyrightIcon from '@mui/icons-material/Copyright';
-import { SHOPIFY_LOGO } from "../images";
 import { } from "@mui/system";
 
 export default function AppFooter() {
