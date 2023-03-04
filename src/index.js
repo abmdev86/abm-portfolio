@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
-import Projects from './pages/Projects';
-import Games from './pages/Games.js';
-import Home from './pages/Home.js';
+import Projects from './Pages/Projects';
+import Games from './Pages/Games.js';
+import Home from './Pages/Home.js';
 import Layout from './components/Layout.jsx';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
