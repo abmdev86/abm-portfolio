@@ -1,5 +1,4 @@
 
-
 import { ColorModeContext } from "../Themes";
 import { useContext } from "react";
 import NavBar from "./NavBar";
