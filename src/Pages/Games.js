@@ -1,7 +1,7 @@
 import { Divider, Paper, Typography } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
 import { Box } from '@mui/system';
-import GAMES from '../data/games.json';
+import { GAMES } from '../data/';
 import { orange } from '@mui/material/colors';
 export default function Games() {
   return (
@@ -18,7 +18,7 @@ export default function Games() {
           >
             <Box
               sx={{
-                p: 2,
+                p: 1.5,
                 bgcolor: 'background.secondary',
                 display: 'flex',
               }}

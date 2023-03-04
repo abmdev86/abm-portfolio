@@ -1,24 +1,51 @@
 
-
-import { CssBaseline, ThemeProvider } from "@mui/material";
-import { mainTheme } from "../Themes";
+import { ColorModeContext } from "../Themes";
+import { useContext } from "react";
 import NavBar from "./NavBar";
 import AppFooter from "./AppFooter";
 import { Container } from "@mui/system";
+import ToggleColorMode from "./ToggleColorMode";
+
 
 export default function Layout({ children }) {
+    const colorMode = useContext(ColorModeContext);
+
+
+
+
+
+    // Update the theme only if the mode changes
     return (
-        <ThemeProvider theme={mainTheme}>
-            <CssBaseline enableColorScheme />
-            <NavBar logoName="Auroiah" />
 
-            <Container maxWidth='md' sx={{ height: '100%', m: 'auto' }}>
+        <ToggleColorMode>
 
-                {children}
-                <AppFooter />
+            <ColorModeContext.Consumer>
+                {
 
-            </Container>
+                    (({ currentTheme }) => (
+                        <>
+                            <NavBar logoName="Auroiah" handleChangeColorMode={colorMode.toggleColorMode} mode={currentTheme === 'light' ? 'Dark' : 'Light'} />
+                            <Container maxWidth='md' sx={{ height: '100%', m: 'auto' }}>
+                                {children}
+                                <AppFooter />
+                                {colorMode.currentTheme}
+                            </Container>
+                        </>
 
-        </ThemeProvider>
+                    ))
+                }
+
+
+
+            </ColorModeContext.Consumer>
+
+        </ToggleColorMode>
+
+
+
+
+
+
+
     );
 }

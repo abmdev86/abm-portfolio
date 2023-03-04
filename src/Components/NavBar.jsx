@@ -9,10 +9,11 @@ import LogoIcon from "./LogoIcon";
 import { Box } from "@mui/system";
 import { Button, IconButton, Menu, MenuItem } from "@mui/material";
 import SocialMediaLinks from "./SocialMediaLinks";
+import { ColorModeContext } from "../Themes";
 
 const pages = ["Games", "Projects"];
 
-export default function NavBar({ logoName }) {
+export default function NavBar({ logoName, handleChangeColorMode, mode }) {
   const [anchorElNav, setAnchorElNav] = useState(null);
 
   const handleOpenNavMenu = (e) => {
@@ -23,7 +24,7 @@ export default function NavBar({ logoName }) {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="sticky" sx={{ bgcolor: 'background.default', color: 'inherit' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <LogoIcon height="50px" width="50px" xs="none" md="flex" />
@@ -107,7 +108,7 @@ export default function NavBar({ logoName }) {
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page, index) => (
               <Button key={index} onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'inherit', display: 'block' }}>
+                sx={{ my: 2, color: 'inherit', display: 'block', }}>
                 <Typography noWrap
                   component="a"
                   href={`/${page.toLocaleLowerCase()}`}
@@ -127,6 +128,15 @@ export default function NavBar({ logoName }) {
             <SocialMediaLinks />
 
           </Box>
+          <Box sx={{ flexGrow: 0 }}>
+            <ColorModeContext.Consumer>
+              {({ toggleColorMode }) => (
+                <Button variant="contained" sx={{ color: 'inherit' }} onClick={toggleColorMode}>Use {mode} Mode</Button>
+              )}
+
+
+            </ColorModeContext.Consumer>
+          </Box>
         </Toolbar>
       </Container>
     </AppBar>
@@ -135,4 +145,6 @@ export default function NavBar({ logoName }) {
 
 NavBar.propTypes = {
   logoName: Proptypes.string,
+  handleChangeColorMode: Proptypes.func,
+  mode: Proptypes.string,
 };
