@@ -5,6 +5,7 @@ import AppFooter from './AppFooter';
 import { Container } from '@mui/system';
 import ToggleColorMode from './ToggleColorMode';
 
+
 export default function Layout({ children }) {
     const colorMode = useContext(ColorModeContext);
 
@@ -19,14 +20,20 @@ export default function Layout({ children }) {
                             handleChangeColorMode={colorMode.toggleColorMode}
                             mode={currentTheme === 'light' ? 'Dark' : 'Light'}
                         />
-                        <Container maxWidth="md" sx={{ height: '100%', m: 'auto' }}>
+                        <Container maxWidth="sm" sx={{ margin: 'auto' }}>
+
                             {children}
-                            <AppFooter />
+
+
                             {colorMode.currentTheme}
+
                         </Container>
+                        <div className='clear'></div>
+                        <AppFooter />
+
                     </>
                 )}
             </ColorModeContext.Consumer>
-        </ToggleColorMode>
+        </ToggleColorMode >
     );
 }
