@@ -78,7 +78,7 @@ export default function NavBar({ logoName, handleChangeColorMode, mode }) {
                     <Typography
                       textAlign="center"
                       component="a"
-                      href="#"
+                      href={`/${page}`}
                       sx={{
                         textDecoration: "none",
                         color: "inherit",
