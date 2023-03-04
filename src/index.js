@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
-import Projects from './Pages/Projects';
+import ProjectsPage from './Pages/ProjectsPage';
 import Games from './Pages/Games.js';
 import Home from './Pages/Home.js';
 import Layout from './components/Layout.jsx';
@@ -19,7 +19,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/projects',
-    element: <Projects />,
+    element: <ProjectsPage />,
   },
 ]);
 

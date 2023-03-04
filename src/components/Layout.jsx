@@ -26,7 +26,9 @@ export default function Layout({ children }) {
 
 
                             {colorMode.currentTheme}
+
                         </Container>
+                        <div className='clear'></div>
                         <AppFooter />
 
                     </>
