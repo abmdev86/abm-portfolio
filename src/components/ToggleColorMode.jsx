@@ -19,7 +19,7 @@ export default function ToggleColorMode({ children }) {
     );
 
     useEffect(() => {
-        console.log(mode);
+
         localStorage.setItem('mode', mode);
 
     }, [mode])
