@@ -1,6 +1,6 @@
 import { createTheme, ThemeProvider, CssBaseline } from "@mui/material";
 import { useEffect, useMemo, useState } from "react";
-import { ColorModeContext } from "../Themes";
+import { ColorModeContext } from "../Themes/contexts/ColorModeContext";
 
 
 export default function ToggleColorMode({ children }) {

@@ -1,4 +1,7 @@
 import { Box, Paper, Typography } from "@mui/material";
+
+
+
 export default function AboutMeCard() {
   return (
     <Box sx={{ height: '100vh', }}>

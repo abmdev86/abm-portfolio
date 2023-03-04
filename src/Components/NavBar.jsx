@@ -9,7 +9,7 @@ import LogoIcon from "./LogoIcon";
 import { Box } from "@mui/system";
 import { Button, IconButton, Menu, MenuItem } from "@mui/material";
 import SocialMediaLinks from "./SocialMediaLinks";
-import { ColorModeContext } from "../Themes";
+import { ColorModeContext } from "../Themes/contexts/ColorModeContext";
 
 const pages = ["Games", "Projects"];
 
