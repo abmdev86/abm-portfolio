@@ -32,7 +32,11 @@ export default function AppFooter() {
             }}
           >
             <small>
-              Aurmor Designs
+              <a href='https://aurmordesigns.net'>
+                Aurmor Designs
+
+              </a>
+
               <CopyrightIcon />
               2023
             </small>

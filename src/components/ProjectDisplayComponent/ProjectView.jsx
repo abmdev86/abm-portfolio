@@ -11,7 +11,7 @@ import {
 
 export default function ProjectView({ project }) {
     return (
-        <Grid item xs={6}>
+        <Grid item xs={6} sx={{ mt: '2em' }}>
             <Card variant='outlined' sx={{ width: '100%' }}>
 
                 <CardMedia sx={{ height: 140 }} image={project.imageSRC} />
