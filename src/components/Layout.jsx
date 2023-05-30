@@ -1,4 +1,3 @@
-import AppFooter from './AppFooter';
 import Navbar from './Navbar';
 
 export default function Layout({ children }) {
@@ -9,7 +8,6 @@ export default function Layout({ children }) {
       <main className="flex-grow container mx-auto">
         <div className="px-4 py-12">{children}</div>
       </main>
-      <AppFooter />
     </div>
   );
 }
