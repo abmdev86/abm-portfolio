@@ -1,155 +1,126 @@
-import Proptypes from "prop-types";
-import AppBar from "@mui/material/AppBar";
-import Container from "@mui/material/Container";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import MenuIcon from "@mui/icons-material/Menu";
-import { useState } from "react";
-import LogoIcon from "./LogoIcon";
-import { Box } from "@mui/system";
-import { Button, IconButton, Menu, MenuItem } from "@mui/material";
-import SocialMediaLinks from "./SocialMediaLinks";
-import { ColorModeContext } from "../Themes/contexts/ColorModeContext";
+import { Menu, Transition } from '@headlessui/react';
 
-const pages = ["Games", "Projects"];
+import {
+  ChevronDownIcon,
+  BookOpenIcon,
+  PuzzlePieceIcon,
+} from '@heroicons/react/24/solid';
+import { Fragment } from 'react';
 
-export default function NavBar({ logoName, handleChangeColorMode, mode }) {
-  const [anchorElNav, setAnchorElNav] = useState(null);
-
-  const handleOpenNavMenu = (e) => {
-    setAnchorElNav(e.currentTarget);
-  };
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
+const Navbar = () => {
   return (
-
-    <Box sx={{ flexGrow: 1 }}>
-
-      <AppBar position="sticky" sx={{ bgcolor: 'background.default', color: 'inherit', }}>
-        <Container maxWidth="xl">
-          <Toolbar disableGutters>
-            <LogoIcon height="50px" width="50px" xs="none" md="flex" />
-            <Typography
-              variant="h6"
-              noWrap
-              component="a"
-              href="/"
-              sx={{
-                display: { xs: "none", md: "flex" },
-                ml: 1,
-                mr: 2,
-                fontWeight: 700,
-                textDecoration: "none",
-                color: "inherit",
-                letterSpacing: 3,
-              }}
+    <header className="h-16 w-full shadow-md">
+      <div className="h-full container mx-auto">
+        <div className="h-full px-4 flex justify-between items-center space-x-4">
+          <a href="/" className="flex items-center space-x-1 no-underline">
+            <span className="text-xl font-semibold tracking-wide">
+              Auroiah<span className="text-rose-600">Morgan</span>
+            </span>
+          </a>
+          <div className="flex items-center space-x-4">
+            <a
+              href="/projects"
+              className="hidden sm:block hover:bg-gray-200 transition px-3 py-1 rounded-md"
             >
-              {logoName.toUpperCase()}
-            </Typography>
-            <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
-              <IconButton
-                size="large"
-                aria-controls="menu-navBar"
-                aria-haspopup="true"
-                color="inherit"
-                onClick={handleOpenNavMenu}
-              >
-                <MenuIcon />
-              </IconButton>
-              <Menu
-                id="menu-navBar"
-                anchorEl={anchorElNav}
-                anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
-                keepMounted
-                transformOrigin={{
-                  vertical: "top",
-                  horizontal: "left",
-                }}
-                open={Boolean(anchorElNav)}
-                onClose={handleCloseNavMenu}
-                sx={{
-                  display: { xs: "block", md: "none" },
-                }}
-              >
-                {pages.map((page, index) => (
-                  <MenuItem key={index} onClick={handleCloseNavMenu}>
-                    <Typography
-                      textAlign="center"
-                      component="a"
-                      href={`/${page}`}
-                      sx={{
-                        textDecoration: "none",
-                        color: "inherit",
-                      }}
-                    >
-                      {page}
-                    </Typography>
-                  </MenuItem>
-                ))}
-              </Menu>
-            </Box>
-            <LogoIcon height="50px" width="50px" xs="flex" md="none" />
-            <Typography
-              variant="h5"
-              noWrap
-              component="a"
-              href="/"
-              sx={{
-                mr: 2,
-                display: { xs: "flex", md: "none" },
-                flexGrow: 1,
-                fontWeight: 700,
-                letterSpacing: ".3rem",
-                color: "inherit",
-                textDecoration: "none",
-              }}
+              Projects
+            </a>
+            <a
+              href="/games"
+              className="hidden sm:block hover:bg-gray-200 transition px-3 py-1 rounded-md"
             >
-              {logoName.toUpperCase()}
-            </Typography>
-            <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-              {pages.map((page, index) => (
-                <Button key={index} onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: 'inherit', display: 'block', }}>
-                  <Typography noWrap
-                    component="a"
-                    href={`/${page.toLocaleLowerCase()}`}
-                    sx={{
-                      letterSpacing: ".3rem",
-                      color: "inherit",
-                      textDecoration: "none",
-                    }}
-                  >
-                    {page}
-
-                  </Typography>
-                </Button>
-              ))}
-            </Box >
-            <Box sx={{ flexGrow: 0 }}>
-              <SocialMediaLinks />
-
-            </Box>
-            <Box sx={{ flexGrow: 0 }}>
-              <ColorModeContext.Consumer>
-                {({ toggleColorMode }) => (
-                  <Button variant="contained" sx={{ color: 'inherit' }} onClick={toggleColorMode}>Use {mode} Mode</Button>
-                )}
-
-
-              </ColorModeContext.Consumer>
-            </Box>
-          </Toolbar>
-        </Container>
-      </AppBar>
-    </Box>
-
+              Games
+            </a>
+            <a
+              className="hidden sm:block hover:bg-gray-200 transition px-3 py-1 rounded-md"
+              href="https://github.com/abmdev86"
+            >
+              <i className="fa-brands fa-github"></i>
+            </a>
+            <a
+              className="hidden sm:block hover:bg-gray-200 transition px-3 py-1 rounded-md"
+              href="https://www.linkedin.com/in/auroiahmorgan/"
+            >
+              <i className="fa-brands fa-linkedin"></i>
+            </a>
+            <a
+              className="hidden sm:block hover:bg-gray-200 transition px-3 py-1 rounded-md"
+              href="https://twitter.com/abm_dev"
+            >
+              <i className="fa-brands fa-twitter"></i>
+            </a>
+            <Menu as="div" className="relative z-50 md:hidden">
+              <Menu.Button className="flex items-center space-x-px group">
+                <ChevronDownIcon className="w-5 h-5 shrink-0 text-gray-500 group-hover:text-current" />
+              </Menu.Button>
+              <Transition
+                as={Fragment}
+                enter="transition ease-out duration-100"
+                enterFrom="opacity-0 scale-95"
+                enterTo="opacity-100 scale-100"
+                leave="transition ease-in duration-75"
+                leaveFrom="opacity-100 scale-100"
+                leaveTo="opacity-0 scale-95"
+              >
+                <Menu.Items className="absolute right-0 w-72 overflow-hidden mt-1 divide-y divide-gray-100 origin-top-right bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                  <div className="flex items-center space-x-2 py-4 px-4 mb-2">
+                    <div className="flex flex-col truncate">
+                      <span>Menu</span>
+                    </div>
+                    <div className="py-2">
+                      <div className="px-2 last:border-t last:pt-2 last:mt-2">
+                        <Menu.Item>
+                          <a
+                            href="/projects"
+                            className="flex items-center space-x-2 py-2 px-4 rounded-md hover:bg-gray-100"
+                          >
+                            <BookOpenIcon className="w-5 h-5 shrink-0 text-gray-500" />
+                            <span>Projects</span>
+                          </a>
+                        </Menu.Item>
+                        <Menu.Item>
+                          <a
+                            href="/games"
+                            className="flex items-center space-x-2 py-2 px-4 rounded-md hover:bg-gray-100"
+                          >
+                            <PuzzlePieceIcon className="w-5 h-5 shrink-0 text-gray-500" />
+                            <span>Games</span>
+                          </a>
+                        </Menu.Item>
+                        <Menu.Item>
+                          <a
+                            className="flex items-center space-x-2 py-2 px-4 rounded-md hover:bg-gray-100"
+                            href="https://github.com/abmdev86"
+                          >
+                            <i className="fa-brands fa-github"></i>
+                          </a>
+                        </Menu.Item>
+                        <Menu.Item>
+                          <a
+                            className="flex items-center space-x-2 py-2 px-4 rounded-md hover:bg-gray-100"
+                            href="https://www.linkedin.com/in/auroiahmorgan/"
+                          >
+                            <i className="fa-brands fa-linkedin"></i>
+                          </a>
+                        </Menu.Item>
+                        <Menu.Item>
+                          <a
+                            className="flex items-center space-x-2 py-2 px-4 rounded-md hover:bg-gray-100 text-center"
+                            href="https://twitter.com/abm_dev"
+                          >
+                            <i className="fa-brands fa-twitter"></i>
+                          </a>
+                        </Menu.Item>
+                      </div>
+                    </div>
+                  </div>
+                </Menu.Items>
+              </Transition>
+            </Menu>
+          </div>
+        </div>
+      </div>
+    </header>
   );
-}
-
-NavBar.propTypes = {
-  logoName: Proptypes.string,
-  handleChangeColorMode: Proptypes.func,
-  mode: Proptypes.string,
 };
+
+export default Navbar;
