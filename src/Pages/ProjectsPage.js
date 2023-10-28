@@ -1,4 +1,4 @@
-import ProjectDisplayComponent from '../components/ProjectDisplayComponent.jsx';
+import ProjectDisplayComponent from '../components/Projects.jsx';
 import PROJECTS from '../data/projects.js';
 
 export default function ProjectsPage() {

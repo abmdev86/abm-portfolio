@@ -1,11 +1,17 @@
+import { BookOpenIcon } from '@heroicons/react/24/solid';
 import '../App.css';
 
-import AboutMeCard from '../components/AboutMeCard';
+import IntroComponent from '../components/IntroComponent';
+import SkillCard from '../components/SkillCard';
 
 function Home() {
   return (
-    <div className="mt-8">
-      <AboutMeCard />
+    <div className="w-screen h-screen flex bg-[#F4E9CD] relative justify-center items-center">
+      <IntroComponent />
+      
+      <SkillCard skillName='React' icon={<BookOpenIcon/>}/>
+
+    
     </div>
   );
 }

@@ -7,6 +7,7 @@ import Games from './Pages/Games.js';
 import Home from './Pages/Home.js';
 import Layout from './components/Layout.jsx';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import About from './Pages/About';
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,9 @@ const router = createBrowserRouter([
   {
     path: '/projects',
     element: <ProjectsPage />,
+  }, {
+    path: '/about',
+    element: <About />,
   },
 ]);
 

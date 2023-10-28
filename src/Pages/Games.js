@@ -1,5 +1,5 @@
 import GAMES from '../data/games';
-import ProjectDisplayComponent from '../components/ProjectDisplayComponent';
+import ProjectDisplayComponent from '../components/Projects';
 export default function Games() {
   return (
     <div className="mt-8">

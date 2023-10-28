@@ -3,10 +3,10 @@ import Navbar from './NavBar';
 export default function Layout({ children }) {
   // Update the theme only if the mode changes
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen">
       <Navbar />
-      <main className="flex-grow container mx-auto">
-        <div className="px-4 py-12">{children}</div>
+      <main className=" w-full ">
+        <div className="flex flex-col w-full h-full">{children}</div>
       </main>
     </div>
   );
