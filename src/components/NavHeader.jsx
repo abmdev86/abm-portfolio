@@ -72,6 +72,28 @@ export default function NavHeader() {
               </p>
             </a>
           </div>
+          <div className=" outline-none flex flex-col justify-start flex-shrink-0 [transform-origin:50%_50%_0px] flex-[0_0_auto] h-auto relative select-none whitespace-pre w-auto ">
+            <a
+              href="https://www.linkedin.com/in/auroiahmorgan/"
+              className=" font-sans text-3xl font-semibold text-left text-black "
+              target="blank"
+            >
+              <p className="font-sans text-3xl font-semibold text-left">
+                LinkedIn
+              </p>
+            </a>
+          </div>
+          <div className=" outline-none flex flex-col justify-start flex-shrink-0 [transform-origin:50%_50%_0px] flex-[0_0_auto] h-auto relative select-none whitespace-pre w-auto ">
+            <a
+              href="https://github.com/abmdev86"
+              className=" font-sans text-3xl font-semibold text-left text-black "
+              target="blank"
+            >
+              <p className="font-sans text-3xl font-semibold text-left">
+                Github
+              </p>
+            </a>
+          </div>
         </div>
         {/* menu */}
 
