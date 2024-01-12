@@ -1,13 +1,13 @@
 import Navbar from './NavBar';
+import NavHeader from './NavHeader';
 
 export default function Layout({ children }) {
   // Update the theme only if the mode changes
   return (
-    <div className="min-h-screen">
-      <Navbar />
-      <main className=" w-full ">
-        <div className="flex flex-col w-full h-full">{children}</div>
-      </main>
+    <div className="min-h-screen min-w-screen">
+      {/* <Navbar /> */}
+      <NavHeader />
+      <main className=" w-screen h-full ">{children}</main>
     </div>
   );
 }
