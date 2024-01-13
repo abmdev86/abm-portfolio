@@ -1,5 +1,4 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import ProjectDisplayComponent from '../components/Projects.jsx';
 import { faCog } from '@fortawesome/free-solid-svg-icons';
 import ProjectListView from '../components/ProjectListView.jsx';
 
