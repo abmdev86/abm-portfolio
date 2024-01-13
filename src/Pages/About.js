@@ -56,7 +56,7 @@ export default function About() {
             </div>
           </div>
           <div className=" outline-none flex flex-col justify-start flex-shrink-0 flex-[0_0_auto] h-auto overflow-hidden relative  w-full  [overflow-wrap:break-word] [word-break:break-word]  ">
-            <h3 className=" font-sans text-sm md:text-xl font-medium tracking-tighter md:tracking-[-2.1px] text-left text-[rgb(0,17,34)] m-0 p-0">
+            <h3 className="  text-sm md:text-xl  tracking-tighter md:tracking-normal text-left text-[rgb(0,17,34)] m-0 p-0">
               As a React developer, I bring a passion for creating cutting-edge
               web applications and a deep commitment to delivering exceptional
               user experiences. With a solid foundation in front-end
@@ -137,8 +137,8 @@ export default function About() {
           </div>
         </div>
         {/* certifications */}
-        <div className=" p-[80px_40px]  place-content-center items-center bg-white flex flex-[0_0_auto] flex-col gap-[60px] h-auto overflow-hidden md:p-[100px_40px] relative w-full">
-          <div className=" outline-none flex flex-col justify-start  flex-shrink-0 transform-none flex-[0_0_auto] h-auto overflow-visible relative whitespace-pre w-auto">
+        <div className=" p-[60px_20px] md:p-[80px_40px] place-content-center items-center bg-white flex flex-[0_0_auto] flex-col gap-[60px] h-auto overflow-hidden lg:p-[100px_40px] relative w-full">
+          <div className=" outline-none flex md:flex-col justify-start  flex-shrink-0 transform-none flex-[0_0_auto] h-auto overflow-visible relative whitespace-pre w-auto">
             <h2 className=" font-bold text-black text-[16px] tracking-normal md:tracking-[-2.1px] md:text-[50px]  capitalize text-start">
               certifications and affiliations
             </h2>
