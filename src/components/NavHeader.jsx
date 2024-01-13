@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Logo from '../images/abm_logo.png';
 
 export default function NavHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -14,7 +15,9 @@ export default function NavHeader() {
         <div className=" cursor-pointer [gap:unset] justify-between p-[10px] w-full place-content-center items-center flex flex-[0_0_auto] md:gap-0 h-min overflow-visible md:p-[10px_0px_10px_10px]  md:w-min">
           <div className=" flex [background-size:100%_100%] flex-shrink-0 [image-rendering:pixelated] flex-[0_0_auto] h-6 relative w-[26px]">
             <div className=" overflow-hidden absolute p-0">
-              <a href="/">Logo</a>
+              <a href="/">
+                <img src={Logo} alt="auroiah logo" />
+              </a>
             </div>
           </div>
           <div

@@ -1,6 +1,4 @@
-import Navbar from './NavBar';
 import NavHeader from './NavHeader';
-
 export default function Layout({ children }) {
   // Update the theme only if the mode changes
   return (
