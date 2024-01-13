@@ -1,7 +1,7 @@
 import '../App.css';
 import Footer from '../components/Footer';
 import ProfilePicture from '../components/ProfilePicture';
-import ProfilePic from '../images/profilepic.jpg';
+import { ProfilePic } from '../images';
 function Home() {
   return (
     <>

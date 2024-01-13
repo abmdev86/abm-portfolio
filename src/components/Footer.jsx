@@ -1,4 +1,4 @@
-import { links } from '../lib';
+import { footerLinks } from '../lib';
 
 const LinkElement = ({ label, href }) => {
   return (
@@ -18,7 +18,7 @@ export default function Footer() {
     <>
       <div className=" md:flex gap-[10px] justify-start order-2 p-[30px] content-center md:justify-between items-center bg-white hidden md:flex-[0_0_auto] flex-col h-min w-full overflow-visible md:p-[30px_50px] relative md:w-screen ">
         <div className=" justify-start items-start flex flex-[0_0_auto] gap-[15px] h-min overflow-hidden p-0  relative w-min">
-          {links.map((link, index) => (
+          {footerLinks.map((link, index) => (
             <LinkElement key={index} label={link.label} href={link.href} />
           ))}
         </div>
